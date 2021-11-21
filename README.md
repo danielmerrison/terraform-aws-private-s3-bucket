@@ -15,31 +15,34 @@ Creates the boiler plate projects structure and files for a Terraform module.
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 3.66.0 |
 
 ## Modules
 
-| Name | Source | Version |
-|------|--------|---------|
-| <a name="module_example_external_module"></a> [example\_external\_module](#module\_example\_external\_module) | ./modules/external-module | n/a |
-| <a name="module_example_internal_module"></a> [example\_internal\_module](#module\_example\_internal\_module) | ./modules/internal-module | n/a |
+No modules.
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [aws_s3_bucket.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) | resource |
+| [aws_s3_bucket_public_access_block.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_public_access_block) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | Your name | `string` | `"Aristotle"` | no |
-| <a name="input_region"></a> [region](#input\_region) | Default region used by the provider | `string` | `"us-east-2"` | no |
+| <a name="input_bucket_name"></a> [bucket\_name](#input\_bucket\_name) | Bucket name | `string` | n/a | yes |
+| <a name="input_versioning"></a> [versioning](#input\_versioning) | (Optional) Enable bucket versioning.  Default: true | `string` | `true` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_response"></a> [response](#output\_response) | Sub-module responses |
+| <a name="output_arn"></a> [arn](#output\_arn) | Arn of the bucket |
+| <a name="output_id"></a> [id](#output\_id) | Name of the bucket |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Development
